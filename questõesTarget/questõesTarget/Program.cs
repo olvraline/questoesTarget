@@ -1,4 +1,5 @@
 ﻿
+
 /* questão 1
 
 explicação:
@@ -49,61 +50,44 @@ else
         }
 }
 
-/*questão 3
-class Program
-{
-    static void Main()
-    {
-        double[] faturamentoDiario = { 876,4,674,34,34,5874,36486,9,12,54};
+/* questão 3
 
-        if (faturamentoDiario.Length > 0)
-        {
-            double menorFaturamento = faturamentoDiario.Min();
-            double maiorFaturamento = faturamentoDiario.Max();
-            int diasAcimaMedia = ContarDiasAcimaMedia(faturamentoDiario);
+a) 1, 3, 5, 7, ___
 
-            Console.WriteLine($"Menor faturamento: {menorFaturamento}");
-            Console.WriteLine($"Maior faturamento: {maiorFaturamento}");
-            Console.WriteLine($"Dias acima da média anual: {diasAcimaMedia}");
-        }
-        else
-        {
-            Console.WriteLine("O vetor de faturamento diário está vazio.");
-        }
-    }
+Está aumentando de dois em dois. O próximo é 9.
+b) 2, 4, 8, 16, 32, 64, ___
 
-    static int ContarDiasAcimaMedia(double[] faturamento)
-    {
-        double mediaAnual = faturamento.Where(valor => valor > 0).DefaultIfEmpty(0).Average();
-        return faturamento.Count(valor => valor > mediaAnual);
-    }
-}
+Cada número é o dobro do anterior. Então, o próximo é 128.
+c) 0, 1, 4, 9, 16, 25, 36, ___
+
+É tipo os quadrados dos números naturais. O próximo é 7², que é 49.
+d) 4, 16, 36, 64, ___
+
+Esses são os quadrados dos números pares. Então, o próximo é 8², que é 64.
+e) 1, 1, 2, 3, 5, 8, ___
+
+Aqui é a sequência de Fibonacci, somando sempre os dois anteriores. O próximo é 5 + 8, que dá 13.
+f) 2, 10, 12, 16, 17, 18, 19, ___
+
+Está aumentando de oito em oito. O próximo é 19 + 8, que é 27.
+Essas sequências são meio malucas, mas cada uma tem a sua lógica especial!
 
 
-/*questão 4
-class Program
-{
-    static void Main()
-    {
-        double[] faturamento = { 67836.43, 36678.66, 29229.88, 27165.48, 19849.53 };
 
-        double totalFaturamento = faturamento.Sum();
+/* questão 4 
 
-        Console.WriteLine("Percentual de representação por estado:");
-        faturamento.Select((valor, index) =>
-        {
-            double percentual = (valor / totalFaturamento) * 100;
-            Console.WriteLine($"{ObterEstado(index)}: {percentual:F2}%");
-            return percentual;
-        }).ToList();
-    }
+Primeira rodada:
 
-    static string ObterEstado(int index)
-    {
-        string[] estados = { "SP", "RJ", "MG", "ES", "Outros" };
-        return estados[index];
-    }
-}
+ligaria o primeiro interruptor e daria uma pausa.
+Desligo o primeiro e boto o segundo pra funcionar.
+Segunda rodada:
+
+na sala das lâmpadas.
+Se a primeira tá acesa, é porque o primeiro interruptor é dela.
+Agora, vou sentir a lâmpada que tá apagada.
+Se ela tá quente, o segundo interruptor é dela.
+Se ela tá fria, é o terceiro interruptor.
+
 
 /* questão 5
 
